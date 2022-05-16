@@ -7,6 +7,6 @@ import javafx.fxml.FXMLLoader;
 public class LoginController implements FXMLLoaderSupplier {
     @Override
     public FXMLLoader get() {
-        return new FXMLLoader(FxApplication.class.getResource("login-view.fxml"));
+        return new FXMLLoader(LoginController.class.getResource("login-view.fxml"));
     }
 }

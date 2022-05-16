@@ -4,5 +4,6 @@ module com.zhuang.javafx {
 
 
     opens com.zhuang.javafx to javafx.fxml;
+    opens com.zhuang.javafx.dialog.login to javafx.fxml;
     exports com.zhuang.javafx;
 }
