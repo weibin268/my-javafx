@@ -23,6 +23,7 @@ public abstract class Window {
     }
 
     public Window(String title, double width, double height) {
+        this.title = title;
         this.width = width;
         this.height = height;
     }
