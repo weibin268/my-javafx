@@ -5,4 +5,7 @@ import javafx.fxml.FXMLLoader;
 
 public class Login extends Window {
 
+    public Login() {
+        super("Login", 500, 300);
+    }
 }

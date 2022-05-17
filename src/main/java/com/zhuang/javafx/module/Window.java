@@ -3,6 +3,7 @@ package com.zhuang.javafx.module;
 import com.zhuang.javafx.module.login.Login;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -13,14 +14,15 @@ public abstract class Window {
 
     protected FXMLLoader fxmlLoader;
     protected Scene scene;
+    protected String title;
     protected double width;
     protected double height;
 
     public Window() {
-        this(500, 500);
+        this(null, 500, 500);
     }
 
-    public Window(double width, double height) {
+    public Window(String title, double width, double height) {
         this.width = width;
         this.height = height;
     }
@@ -51,13 +53,25 @@ public abstract class Window {
         return getClass().getSimpleName() + ".fxml";
     }
 
-    public void open(String title) {
+    public void open() {
+        open(null, Modality.APPLICATION_MODAL);
+    }
+
+    public void open(String title, Modality modality) {
         Stage stage = new Stage();
+        if (modality != null) {
+            stage.initModality(modality);
+        }
         Scene scene = getScene();
         stage.setScene(scene);
-        stage.setTitle(title);
+        if (title != null) {
+            stage.setTitle(title);
+        } else {
+            stage.setTitle(this.title);
+        }
         stage.show();
     }
+
 
     public void show(String title) {
         primaryStage.setScene(scene);

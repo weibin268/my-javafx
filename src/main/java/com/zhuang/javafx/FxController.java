@@ -14,7 +14,6 @@ public class FxController {
     protected void onHelloButtonClick() {
         AlertUtils.info("test");
         welcomeText.setText("Welcome to JavaFX Application!");
-        Login login = new Login();
-        login.show("tttt");
+        new Login().open();
     }
 }
