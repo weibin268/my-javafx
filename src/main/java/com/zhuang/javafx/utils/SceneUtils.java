@@ -1,6 +1,6 @@
 package com.zhuang.javafx.utils;
 
-import com.zhuang.javafx.dialog.FXMLLoaderSupplier;
+import com.zhuang.javafx.module.FXMLLoaderSupplier;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 

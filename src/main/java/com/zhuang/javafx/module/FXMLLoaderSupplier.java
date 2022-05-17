@@ -1,4 +1,4 @@
-package com.zhuang.javafx.dialog;
+package com.zhuang.javafx.module;
 
 import javafx.fxml.FXMLLoader;
 
