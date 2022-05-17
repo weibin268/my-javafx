@@ -1,11 +1,8 @@
 package com.zhuang.javafx.module.login;
 
-import com.zhuang.javafx.module.FXMLLoaderSupplier;
+import com.zhuang.javafx.module.Window;
 import javafx.fxml.FXMLLoader;
 
-public class Login implements FXMLLoaderSupplier {
-    @Override
-    public FXMLLoader get() {
-        return new FXMLLoader(Login.class.getResource("login.fxml"));
-    }
+public class Login extends Window {
+
 }

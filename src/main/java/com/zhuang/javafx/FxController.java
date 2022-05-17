@@ -1,5 +1,6 @@
 package com.zhuang.javafx;
 
+import com.zhuang.javafx.module.login.Login;
 import com.zhuang.javafx.utils.AlertUtils;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -13,6 +14,7 @@ public class FxController {
     protected void onHelloButtonClick() {
         AlertUtils.info("test");
         welcomeText.setText("Welcome to JavaFX Application!");
-
+        Login login = new Login();
+        login.show("tttt");
     }
 }
