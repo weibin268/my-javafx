@@ -19,18 +19,18 @@
        <HBox alignment="CENTER">
       <children>
               <Label>用户：</Label>
-              <TextField>aa</TextField>
+              <TextField fx:id="username"> </TextField>
       </children>
        </HBox>
        <HBox alignment="CENTER">
           <children>
               <Label>密码：</Label>
-              <TextField>aa</TextField>
+              <TextField fx:id="password"> </TextField>
           </children>
        </HBox>
        <HBox alignment="CENTER">
            <children>
-              <Button>登录</Button>
+              <Button onAction="#onLogin">登录</Button>
            </children>
        </HBox>
    </children>
