@@ -39,6 +39,14 @@ public abstract class Window {
         return scene;
     }
 
+    public Scene newScene(double width, double height) {
+        try {
+            return new Scene(getFXMLLoader().load(), width, height);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     public FXMLLoader getFXMLLoader() {
         if (fxmlLoader == null) {
             fxmlLoader = newFXMLLoader();
@@ -73,6 +81,9 @@ public abstract class Window {
         stage.show();
     }
 
+    public void show() {
+        show(title);
+    }
 
     public void show(String title) {
         primaryStage.setScene(getScene());
