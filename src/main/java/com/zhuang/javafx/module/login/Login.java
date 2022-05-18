@@ -5,6 +5,6 @@ import com.zhuang.javafx.common.Window;
 public class Login extends Window {
 
     public Login() {
-        super("Login", 500, 300);
+        super("Login", 300, 200);
     }
 }
