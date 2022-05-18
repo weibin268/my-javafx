@@ -1,7 +1,6 @@
 package com.zhuang.javafx.module.login;
 
-import com.zhuang.javafx.module.Window;
-import javafx.fxml.FXMLLoader;
+import com.zhuang.javafx.common.Window;
 
 public class Login extends Window {
 

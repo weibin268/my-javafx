@@ -1,4 +1,4 @@
-package com.zhuang.javafx.module;
+package com.zhuang.javafx.common;
 
 import com.zhuang.javafx.module.login.Login;
 import javafx.fxml.FXMLLoader;

@@ -1,6 +1,6 @@
 package com.zhuang.javafx;
 
-import com.zhuang.javafx.module.Window;
+import com.zhuang.javafx.common.Window;
 import com.zhuang.javafx.module.login.Login;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
