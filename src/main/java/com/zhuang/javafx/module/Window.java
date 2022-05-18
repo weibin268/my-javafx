@@ -75,7 +75,7 @@ public abstract class Window {
 
 
     public void show(String title) {
-        primaryStage.setScene(scene);
+        primaryStage.setScene(getScene());
         primaryStage.setTitle(title);
     }
 }
