@@ -1,0 +1,7 @@
+
+.text-field
+{
+  -fx-background-color : transparent;
+  -fx-border-width : 1px;
+  -fx-font-weight: block;
+}

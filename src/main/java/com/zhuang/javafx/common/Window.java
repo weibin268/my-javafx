@@ -37,18 +37,20 @@ public abstract class Window {
             return newScene(width != null ? width : this.width, height != null ? height : this.height);
         }
         if (scene == null) {
-            try {
-                scene = new Scene(getFXMLLoader().load(), this.width, this.height);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
+            scene = newScene(getFXMLLoader(), this.width, this.height);
         }
         return scene;
     }
 
     public Scene newScene(double width, double height) {
+        return newScene(getFXMLLoader(), width, height);
+    }
+
+    public Scene newScene(FXMLLoader fxmlLoader, double width, double height) {
         try {
-            return new Scene(getFXMLLoader().load(), width, height);
+           Scene scene= new Scene(fxmlLoader.load(), width, height);
+           scene.getStylesheets().add(getClass().getResource("/com/zhuang/javafx/theme/default/main.css").toExternalForm());
+           return scene;
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
