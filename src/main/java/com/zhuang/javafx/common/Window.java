@@ -69,23 +69,23 @@ public abstract class Window {
         return getClass().getSimpleName() + ".fxml";
     }
 
-    public void open() {
-        open(null, null, null, Modality.APPLICATION_MODAL);
+    public Stage open() {
+        return open(null, null, null, Modality.APPLICATION_MODAL);
     }
 
-    public void open(String title) {
-        open(title, null, null, Modality.APPLICATION_MODAL);
+    public Stage open(String title) {
+        return open(title, null, null, Modality.APPLICATION_MODAL);
     }
 
-    public void open(Double width, Double height) {
-        open(null, width, height, Modality.APPLICATION_MODAL);
+    public Stage open(Double width, Double height) {
+        return open(null, width, height, Modality.APPLICATION_MODAL);
     }
 
-    public void open(String title, Double width, Double height) {
-        open(title, width, height, Modality.APPLICATION_MODAL);
+    public Stage open(String title, Double width, Double height) {
+        return open(title, width, height, Modality.APPLICATION_MODAL);
     }
 
-    public void open(String title, Double width, Double height, Modality modality) {
+    public Stage open(String title, Double width, Double height, Modality modality) {
         Stage stage = new Stage();
         if (modality != null) {
             stage.initModality(modality);
@@ -97,29 +97,31 @@ public abstract class Window {
             stage.setTitle(this.title);
         }
         stage.show();
+        return stage;
     }
 
-    public void show() {
-        show(title);
+    public Stage show() {
+        return show(title);
     }
 
-    public void show(String title) {
+    public Stage show(String title) {
         primaryStage.setScene(getScene());
         primaryStage.setTitle(title);
+        return primaryStage;
     }
 
-    public void show(Double width, Double height) {
-        show(primaryStage, title, width, height);
+    public Stage show(Double width, Double height) {
+        return show(primaryStage, title, width, height);
     }
 
-    public void show(String title, Double width, Double height) {
-        show(primaryStage, title, width, height);
+    public Stage show(String title, Double width, Double height) {
+        return show(primaryStage, title, width, height);
     }
 
-    public void show(Stage stage, String title, Double width, Double height) {
+    public Stage show(Stage stage, String title, Double width, Double height) {
         stage.setScene(getScene(width, height));
         stage.setTitle(title);
+        return stage;
     }
-
 
 }

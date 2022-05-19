@@ -19,7 +19,6 @@ public class FxApplication extends Application {
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();
-
         new Login().show();
     }
 
